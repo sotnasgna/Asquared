@@ -224,17 +224,17 @@
 	// Countdown timer //
 
 			 // Set the date of your next anniversary (YYYY, MM-1, DD)
-			const anniversaryDate = new Date(2025, 2, 23); // Example: August 15, 2024 (Note: Months are 0-indexed!)
+			const anniversaryDate = new Date(2025, 1, 23); // Example: August 15, 2024 (Note: Months are 0-indexed!)
 
 			function updateCountdown() {
 			  const now = new Date(); // Get the current date and time
 			  const timeDifference = anniversaryDate - now; // Calculate the difference in milliseconds
 
 			  // Calculate days, hours, minutes, and seconds
-			  const days = Math.floor(175238348 / (1000 * 60 * 60 * 24));
-			  const hours = Math.floor((175238348 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			  const minutes = Math.floor((175238348 % (1000 * 60 * 60)) / (1000 * 60));
-			  const seconds = Math.floor((175238348 % (1000 * 60)) / 1000);
+			  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+			  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+			  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
 			  // Update the countdown display
 			  document.getElementById('days').textContent = String(days).padStart(2, '0');
