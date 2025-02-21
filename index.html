@@ -39,7 +39,7 @@
 
 					<header class="herobox">
 						
-						<h1 class="pink"> Three Years </h1>
+						<h1 class="pink"> Three Years! </h1>
 						<p> Of putting up with me (and still going strong!) </p>
 
 					</header>
@@ -49,8 +49,7 @@
 
 				<div class="sectionspacing fullw">
 
-					<hr>
-						
+					<hr>	
 					<h3 class="pink"> 
 						<marquee scrollamount="15" loop="-1" >
 							i love you my cutie pie 
@@ -58,19 +57,19 @@
 							i love you my cutie pie 
 						</marquee> 
 					</h3>
-
 					<hr>
 
 				</div>
 		</div>
 
 	<!-- SAPPY STUFF--> 
+
+
 		<div class="sectionspacing">
 			<div class="container-fluid">
 				<div class="container">
 
 					<div class="row">
-
 
 						<div class="column">
 							<h2>
@@ -79,23 +78,187 @@
 							<p>
 								My simping words... fr fr
 							</p>
-							<a class="button"> Show me more simping</a>
+							<a id="read-button" class="tapthat" > Show me simping!</a>
 							
 						</div>
-
 						
 						<div class="column">
-							<p> testing </p>
+							<div class="bluebox100">
+
+									<div class="message-container">
+								    	<p id="typed-message"></p>
+								  	</div>
+
+							</div>
 							
 						</div>
 
 
+					</div> <!-- row -->
+					
+				</div> <!-- container -->
+				
+			</div><!-- container fluid -->
+		</div> <!-- section spacing -->
+
+
+	<!-- quick rewind--> 
+
+
+		<div class="sectionspacing">
+			<div class="container-fluid">
+				<div class="container">
+					<div class="row">
+
+							<h2 class="pink"> 
+								<center> 
+									quick rewind
+								</center>
+							</h2>
+
+					</div> <!-- row -->
+
+
+					<div class="row">
+						
+						<div class="column4 bluebox"> </div>
+						<div class="column4 bluebox"> </div>
+						<div class="column4 bluebox"> </div>
+						<div class="column4 bluebox"> </div>
+
+					</div> <!-- row -->
+
+					<div class="row">
+						<a class="tapthat" > Show me more simping</a>
 					</div>
 					
-				</div>
+				</div> <!-- container -->
 				
-			</div>
+			</div><!-- container fluid -->
+		</div> <!-- section spacing -->
+
+
+	<!-- ANNIVERSARY COUNTDOWN -->
+
+
+		<div class="sectionspacing fullw">
+
+			<hr>	
+			<h3 class="pink"> 
+				<marquee scrollamount="15" loop="-1" >
+					anniversary countdown 
+					<img src="img/heart.png" style=" margin: 0 25px 0 25px;"  width="40px">
+					anniversary countdown 
+				</marquee> 
+			</h3>
+			<hr>
+
+		</div> <!--section spacing -->
+
+		<div>
+
+
+		  <div class="countdown">
+		    <div class="time">
+
+		      <span id="days">00</span>
+		      <span class="label">Days</span>
+
+		    </div>
+
+
+		    <div class="time">
+
+		      <span id="hours">00</span>
+		      <span class="label">Hours</span>
+
+		    </div>
+
+
+		    <div class="time">
+
+		      <span id="minutes">00</span>
+		      <span class="label">Minutes</span>
+
+		    </div>
+
+
+		    <div class="time">
+		      <span id="seconds">00</span>
+		      <span class="label">Seconds</span>
+		    </div>
+
 		</div>
+
+<!-- funsies javascipt -->
+
+	<!-- typed message -->
+
+		<script>
+		  const message = 
+		    "Happy three years my gimpy (づ ◕‿◕ )づ I am incredibly grateful to have spent the last three years together, through the fun times and sad boi hours. Hopefully, you and I get to spend the next year within the same city and embark on new adventures, and more big feeeeesh ⊂◉‿◉つ! Here is to many more anniversaries ٩꒰ʘʚʘ๑꒱۶ I love you very much, my cutie pie.";
+		  const messageElement = document.getElementById('typed-message');
+		  const readButton = document.getElementById('read-button'); // Get the button element
+		  let index = 0;
+
+		  function typeMessage() {
+		    if (index < message.length) {
+		      messageElement.textContent += message.charAt(index);
+		      index++;
+		      setTimeout(typeMessage, 50);
+		    } else {
+		      messageElement.style.borderRight = 'none';
+		    }
+		  }
+
+		  // Trigger typing when the button is clicked
+		  readButton.addEventListener('click', () => {
+		    // Reset message and index if needed for replays
+		    messageElement.textContent = '';
+		    messageElement.style.borderRight = '2px solid black'; // Reset cursor effect
+		    index = 0;
+		    typeMessage();
+		  });
+
+
+	// Countdown timer //
+
+			 // Set the date of your next anniversary (YYYY, MM-1, DD)
+			const anniversaryDate = new Date(2025, 2, 23); // Example: August 15, 2024 (Note: Months are 0-indexed!)
+
+			function updateCountdown() {
+			  const now = new Date(); // Get the current date and time
+			  const timeDifference = anniversaryDate - now; // Calculate the difference in milliseconds
+
+			  // Calculate days, hours, minutes, and seconds
+			  const days = Math.floor(175238348 / (1000 * 60 * 60 * 24));
+			  const hours = Math.floor((175238348 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  const minutes = Math.floor((175238348 % (1000 * 60 * 60)) / (1000 * 60));
+			  const seconds = Math.floor((175238348 % (1000 * 60)) / 1000);
+
+			  // Update the countdown display
+			  document.getElementById('days').textContent = String(days).padStart(2, '0');
+			  document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+			  document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+			  document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+			  // If the countdown is over, display a message
+			  if (timeDifference < 0) {
+			    clearInterval(countdownInterval);
+			    document.querySelector('.countdown').innerHTML = "<h3>Happy Anniversary!</h3>";
+			  }
+			}
+
+			// Update the countdown every second
+			const countdownInterval = setInterval(updateCountdown, 1000);
+
+			// Run the function once immediately to avoid delay
+			updateCountdown();
+
+		</script>
+
+
+
 
 
 

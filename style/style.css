@@ -37,6 +37,13 @@ body {
   width: 50%;
 }
 
+.column4 {
+  float: left;
+  width: 23%;
+  padding: 20px;
+  margin: 10px;
+}
+
 
 /********** 2. styling **********/
 
@@ -61,11 +68,41 @@ body {
 			fill-opacity: 100;
 		}
 
-		a.button {
-			background-color: #B40863;
-			height: 20px;
-			
+		a {
+			text-decoration: none;
+			color: #F6F5F2;
 		}
+
+		.tapthat {
+			background-color: #B40863;
+			padding: 10px 20px;
+			border-width: 5px;
+			border-radius: 15px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-family: Montserrat;
+			margin: 20px 0;
+			display: inline-block;
+			}
+
+
+		.bluebox {
+			border-radius: 25px;
+			background-color: #DCE8F2;
+			text-align: left;
+			padding: 30px;
+			z-index: -1;
+		}
+
+		.bluebox100 {
+			border-radius: 25px;
+			background-color: #DCE8F2;
+			text-align: left;
+			padding: 30px;
+			z-index: -1;
+			height: 400px;
+		}
+
 
 	/** spacing **/
 
@@ -82,11 +119,6 @@ body {
 
 	/** type **/
 
-		a {
-			text-decoration: none;
-			color: #F6F5F2;
-		}
-
 		h1 { 
 			font-family: Peace Sans;
 			font-size: 150pt;
@@ -101,6 +133,7 @@ body {
 			line-height: 85pt;
 			text-transform: uppercase;
 			text-align: left;
+			margin: 50px 0;
 		}
 
 		h3 { 
@@ -115,6 +148,11 @@ body {
 			font-size: 20px;
 		  }
 
+		span {
+			color: #B40863;
+		}
+
+
 /********** 3. body **********/
 
 .row {
@@ -122,39 +160,84 @@ body {
 	}
 
 
- /** 3.1 nav **/
-	nav {
+		 /** 3.1 nav **/
+			nav {
 
 
+			}
+
+			nav ul {
+				list-style: none;
+				font-family: montserrat;
+			}
+
+			a {
+				text-decoration: none;
+				list-style: none;
+			}
+
+
+			nav li {
+				display: flex;
+				float: right;
+			}
+
+		/** 3.2 HERO **/
+
+			.herobox {
+				border-radius: 50px;
+				background-color: #DCE8F2;
+				text-align: center;
+				padding-top: 100px;
+				padding-bottom: 100px;
+				z-index: -1;
+
+			}
+
+/** funsies **/
+
+	/** typed love note **/
+
+    .message-container {
+      text-align: left;
+      padding: 20px;
+      font-family: Montserrat;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    #typed-message {
+      display: inline-block;
+      border-right: 2px solid #333;
+      white-space: wrap;
+      overflow: ;
+    }
+
+    /** anniversary countdown **/
+
+	.countdown {
+	  display: flex;
+	  justify-content: space-around;
+	  margin-top: 20px;
 	}
 
-	nav ul {
-		list-style: none;
-		font-family: montserrat;
+	.time {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
 	}
 
-	a {
-		text-decoration: none;
-		list-style: none;
+	.time span {
+		font-family: Peace Sans;
+		font-size: 10rem;
+		font-weight: bold;
 	}
 
+	.time .label {
+	  font-size: 2rem;
+	  color: #B40863;
+}
 
-	nav li {
-		display: flex;
-		float: right;
-	}
-
-/** 3.2 HERO **/
-
-	.herobox {
-		border-radius: 50px;
-		background-color: #DCE8F2;
-		text-align: center;
-		padding-top: 100px;
-		padding-bottom: 100px;
-		z-index: -1;
-
-	}
 
 
 
