@@ -98,9 +98,12 @@ body {
 			border-radius: 25px;
 			background-color: #DCE8F2;
 			text-align: left;
-			padding: 30px;
 			z-index: -1;
 			height: 400px;
+		}
+
+		img {
+			border-radius: 15px;
 		}
 
 
