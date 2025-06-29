@@ -122,6 +122,14 @@ body {
 
 	/** type **/
 
+		@font-face {   
+		  font-family: "Peace Sans";   
+		  src: url(fonts/Peace Sans Webfont.ttf) 
+		format('woff'),        
+		  url(fonts/Peace Sans Webfont.ttf) 
+		format('truetype'); 
+		}
+
 		h1 { 
 			font-family: Peace Sans;
 			font-size: 150pt;
